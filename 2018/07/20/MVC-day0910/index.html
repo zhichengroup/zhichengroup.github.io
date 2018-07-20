@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MVC-day0910 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="day9、10JavaBean是特殊的Java类，遵循特定的写法，特点如下： 必须有一个无参构造函数。 属性私有化。 私有属性可以通过public的getter、setter方法读写。 遵循命名规范。类名首字母大写，变量名、方法名首字母小写，多个单词组成，每个单词的首字母大写。  作用：JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MVC-day0910">
+<meta property="og:url" content="http://yoursite.com/2018/07/20/MVC-day0910/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="day9、10JavaBean是特殊的Java类，遵循特定的写法，特点如下： 必须有一个无参构造函数。 属性私有化。 私有属性可以通过public的getter、setter方法读写。 遵循命名规范。类名首字母大写，变量名、方法名首字母小写，多个单词组成，每个单词的首字母大写。  作用：JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/0062STPXly1fr7fcwh466j311y0lcdi6.jpg">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1925650-78a3e20cbfb4b864.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700">
+<meta property="og:updated_time" content="2018-07-20T01:07:44.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MVC-day0910">
+<meta name="twitter:description" content="day9、10JavaBean是特殊的Java类，遵循特定的写法，特点如下： 必须有一个无参构造函数。 属性私有化。 私有属性可以通过public的getter、setter方法读写。 遵循命名规范。类名首字母大写，变量名、方法名首字母小写，多个单词组成，每个单词的首字母大写。  作用：JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/0062STPXly1fr7fcwh466j311y0lcdi6.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MVC-day0910" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/20/MVC-day0910/" class="article-date">
+  <time datetime="2018-07-19T23:35:53.000Z" itemprop="datePublished">2018-07-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MVC-day0910
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="day9、10"><a href="#day9、10" class="headerlink" title="day9、10"></a>day9、10</h1><h6 id="JavaBean是特殊的Java类，遵循特定的写法，特点如下："><a href="#JavaBean是特殊的Java类，遵循特定的写法，特点如下：" class="headerlink" title="JavaBean是特殊的Java类，遵循特定的写法，特点如下："></a>JavaBean是特殊的Java类，遵循特定的写法，特点如下：</h6><ol>
+<li>必须有一个无参构造函数。</li>
+<li>属性私有化。</li>
+<li>私有属性可以通过public的getter、setter方法读写。</li>
+<li>遵循命名规范。类名首字母大写，变量名、方法名首字母小写，多个单词组成，每个单词的首字母大写。</li>
+</ol>
+<p>作用：JavaBean在J2EE开发中，通常用于封装数据，对于遵循以上写法的JavaBean组件，其它程序可以通过反射技术实例化JavaBean对象，并且通过反射那些遵守命名规范的方法，从而获知JavaBean的属性，进而调用其属性保存数据。————方立勋</p>
+<h6 id="属性修改器"><a href="#属性修改器" class="headerlink" title="属性修改器"></a>属性修改器</h6><p>set前缀+属性名且第一个字母大写</p>
+<h6 id="属性访问器"><a href="#属性访问器" class="headerlink" title="属性访问器"></a>属性访问器</h6><p>get方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name = <span class="string">"su"</span>; <span class="comment">// getClass()</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="jsp-中的-JavaBean-动作元素"><a href="#jsp-中的-JavaBean-动作元素" class="headerlink" title="jsp 中的 JavaBean 动作元素"></a>jsp 中的 JavaBean 动作元素</h2><ol>
+<li><a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a> 查找或创建一个JavaBean组件。<br><a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a>标签用于在指定的域范围内查找指定名称的JavaBean对象，如果存在则直接返回该JavaBean对象的引用，如果不存在则实例化一个新的JavaBean对象并将它以指定的名称存储到指定的域范围中。</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsp:useBean</span> <span class="attr">id</span>=<span class="string">"person"</span> <span class="attr">class</span>=<span class="string">"day09.Person"</span> <span class="attr">scope</span>=<span class="string">"page"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">jsp:useBean</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">%=person.getName()%</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>id 属性用于指定JavaBean实例对象的引用名称和其存储在域范围中的名称。</li>
+<li>class 属性用于指定JavaBean的完整类名（即必须带有包名）。</li>
+<li><p>scope 属性用于指定JavaBean实例对象所存储的域范围，取值只能是page、request、session和application等四个值中的一个，其默认值是page。</p>
+<p>scope=”session”  //只在创建的时候执行</p>
+</li>
+</ol>
+<ol start="2">
+<li><a href="jsp:setProperty" target="_blank" rel="noopener">jsp:setProperty</a>  设置组件属性。</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsp:useBean</span> <span class="attr">id</span>=<span class="string">"person"</span> <span class="attr">class</span>=<span class="string">"day09.Person"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">jsp:setProperty</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">property</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"xxx"</span> /&gt;</span>     //setName</span><br><span class="line"><span class="tag">&lt;<span class="name">%=person.getName()%</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%--</span> 用请求参数给<span class="attr">bean</span>赋值 <span class="attr">--</span>%&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">jsp:setProperty</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">property</span>=<span class="string">"name"</span> <span class="attr">param</span>=<span class="string">"name"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%=person.getName()%</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%=person.getAge()%</span>&gt;</span> //字符串转换成int</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">jsp:setProperty</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">property</span>=<span class="string">"birth"</span> <span class="attr">value</span>=<span class="string">"&lt;%=new Date()%&gt;"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%=person.getBirth()%</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%--</span> 用所有请求参数为<span class="attr">bean</span>赋值 <span class="attr">--</span>%&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">jsp:setProperty</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">property</span>=<span class="string">"*"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%=person.getName()%</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%=person.getAge()%</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code>http://localhost:8080/day09/2.jsp?name=123456789&amp;age=111
+</code></pre><ol start="3">
+<li><p><a href="jsp:getProperty" target="_blank" rel="noopener">jsp:getProperty</a>  获取组件属性。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsp:getProperty</span> <span class="attr">name</span>=<span class="string">"person"</span> <span class="attr">property</span>=<span class="string">"name"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 去Java代码<br> 为空 -&gt; null -&gt; 判断返回值 -&gt; el表达式</p>
+</li>
+</ol>
+<h2 id="Demo1-calcolator-jsp-gt-myeclipse"><a href="#Demo1-calcolator-jsp-gt-myeclipse" class="headerlink" title="Demo1 calcolator.jsp -&gt; myeclipse"></a>Demo1 calcolator.jsp -&gt; myeclipse</h2><pre><code>http://localhost:8080/day09/calcolator.jsp
+</code></pre><h2 id="jsp开发模式"><a href="#jsp开发模式" class="headerlink" title="jsp开发模式"></a>jsp开发模式</h2><ol>
+<li>模式一：JSP+JavaBeans<br> 简单<br> JSP页面独自响应请求并将处理结果返回客户。所有的数据通过bean来处理，JSP实现页面的表现。</li>
+<li>模式二：JSP+JavaBeans+Servlet<br> 复杂<br> Servlet处理用户请求，Servlet处理完后设置Bean的属性，JavaBean负责封装数据，JSP读取Bean的属性，然后输出显示。</li>
+</ol>
+<pre><code>JavaBean  -&gt;   Model        模型
+Jsp       -&gt;   view         视图
+servlet   -&gt; Controller    控制器
+</code></pre><p><img src="https://ws1.sinaimg.cn/large/0062STPXly1fr7fcwh466j311y0lcdi6.jpg" alt="MVC"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1925650-78a3e20cbfb4b864.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="图2"></p>
+<ol>
+<li>用户通过浏览器访问jsp页面，在jsp上的所有操作都直接请求控制层 Servlet来完成。</li>
+<li>web层servlet获取浏览器提交过来的参数传递到业务逻辑层中的Service中进行数据处理。</li>
+<li>Service层将控制层传递过来的参数传递到Dao层(数据访问层)。</li>
+<li>Dao层根据Service层的参数需求来访问数据库。</li>
+<li>数据库根据Dao层的操作将数据集返回Dao层。</li>
+<li>Dao层将获得的数据通过JavaBean对象进行封装，然后将封装好的数据返回给Service 层。</li>
+<li>Service取出数据。</li>
+<li><ol start="9">
+<li>Service层将数据又封装到JavaBean返回给web层servlet。</li>
+<li>web层servlet将得到的数据转发到对应的jsp页面给用户显示。</li>
+</ol>
+</li>
+</ol>
+<p>类<br>        cn.itcast.domain              // javabean<br>        cn.itcast.dao                 // dao接口<br>        cn.itcast.dao.impl            // dao实现<br>        cn.itcast.service             // service接口<br>        cn.itcast.service.impl        // Service实现<br>        cn.itcast.web.ui              // 页面<br>        cn.itcast.utils               // 工具类<br>        cn.itcast.web.controller      // LoginServlet  处理用户请求<br>        junit.test                    // 测试类<br>    web.listener<br>    web.Filer<br>    WEB-INF/jsp 存放jsp文件  阻止直接访问<br> 便于维护</p>
+<h1 id="EL表达式-JSTL标签"><a href="#EL表达式-JSTL标签" class="headerlink" title="EL表达式 JSTL标签"></a>EL表达式 JSTL标签</h1><ol>
+<li><p>${…} -&gt; pageContext.findAttribute()<br>找不到标识符返回空””,而不是null。</p>
+</li>
+<li><p>3.jsp  +  set city address</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">el表达式</span><br><span class="line">$(data)</span><br><span class="line">pageContext.findAttribute(<span class="string">"data"</span>);</span><br><span class="line"><span class="comment">//四个域查找顺序 page request session application</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">	String datas = <span class="string">"asd"</span>;</span><br><span class="line">	request.setAttribute(<span class="string">"dat"</span>, datas);</span><br><span class="line">%&gt;</span><br><span class="line">$&#123;dat&#125;</span><br><span class="line"></span><br><span class="line">&lt;%-- pageContext.findAttribute(<span class="string">"data"</span>)  page request session application  --%&gt;</span><br><span class="line"></span><br><span class="line">&lt;%</span><br><span class="line">  Person p = <span class="keyword">new</span> Person();</span><br><span class="line">  p.setName(<span class="string">"aaaa"</span>);</span><br><span class="line">  request.setAttribute(<span class="string">"person"</span>, p);</span><br><span class="line">%&gt;</span><br><span class="line">$&#123;person.name&#125;</span><br><span class="line">&lt;%--</span><br><span class="line">pageContext.findAttribute(<span class="string">"person"</span>)  <span class="comment">// page request session application</span></span><br><span class="line">--%&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="JSTL标签"><a href="#JSTL标签" class="headerlink" title="JSTL标签"></a>JSTL标签</h2><ol>
+<li>导包<br>jstl.jar  standerd.jar</li>
+<li><p>jsp页面中使用 &lt;%   @ tablib url=”” prifix=””   %&gt;</p>
+<pre><code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+      uri
+</code></pre></li>
+<li>常用 &lt;c:foreach var=”” items=””&gt; &lt;c:if test=””&gt;</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">taglib</span> <span class="attr">uri</span>=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> <span class="attr">prefix</span>=<span class="string">"c"</span>%&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">  <span class="attr">List</span> <span class="attr">list</span> = <span class="string">new</span> <span class="attr">ArrayList</span>();</span></span><br><span class="line"><span class="tag">  <span class="attr">list.add</span>(<span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">tt</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">list.add</span>(<span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">yy</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">list.add</span>(<span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">uu</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">request.setAttribute</span>("<span class="attr">list</span>", <span class="attr">list</span>);  //放在<span class="attr">req</span>里</span></span><br><span class="line"><span class="tag">%&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">items</span>=<span class="string">"$&#123;list&#125;"</span> <span class="attr">var</span>=<span class="string">"person"</span>&gt;</span>  // EL里起别名</span><br><span class="line">   $&#123;person.name&#125; <span class="tag">&lt;<span class="name">br</span> /&gt;</span>   // ArrayList按顺序输出</span><br><span class="line"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">  <span class="attr">Map</span> <span class="attr">map</span> = <span class="string">new</span> <span class="attr">HashMap</span>();</span></span><br><span class="line"><span class="tag">  <span class="attr">map.put</span>("<span class="attr">aa</span>", <span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">aaaaa</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">map.put</span>("<span class="attr">bb</span>", <span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">bbbbb</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">map.put</span>("<span class="attr">cc</span>", <span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">ccccc</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">map.put</span>("<span class="attr">dd</span>", <span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">ddddd</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">map.put</span>("<span class="attr">11</span>", <span class="attr">new</span> <span class="attr">Person</span>("<span class="attr">eeeee</span>"));</span></span><br><span class="line"><span class="tag">  <span class="attr">request.setAttribute</span>("<span class="attr">map</span>", <span class="attr">map</span>);</span></span><br><span class="line"><span class="tag">%&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">items</span>=<span class="string">"$&#123;map&#125;"</span> <span class="attr">var</span>=<span class="string">"entry"</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- map.entrySet() --&gt;</span></span><br><span class="line">  $&#123;entry.key&#125;:$&#123;entry.value.name&#125; <span class="tag">&lt;<span class="name">br</span> /&gt;</span>   //  输出全部键值对</span><br><span class="line"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>计算器  </li>
+</ol>
+<h1 id="day9-user"><a href="#day9-user" class="headerlink" title="day9_user"></a>day9_user</h1><ol>
+<li><p>搭建开发环境  </p>
+<ol>
+<li>导开发包<br>dom4j开发包<br>jstl开发包<br>beanUtils开发包<br>log4j开发包  </li>
+<li>创建组织程序的包<br>  cn.itcast.domain              // javabean 存放数据实体<br>  cn.itcast.dao                 // dao接口  从实现中直接抽取出接口<br>  cn.itcast.dao.impl            // dao实现<br>  cn.itcast.service             // service接口<br>  cn.itcast.service.impl        // Service实现  处理servlet中实际的任务<br>  cn.itcast.web.ui              // 存放为用户提供用户界面servlet，此界面将调用相关的jsp页面进行跳转<br>  cn.itcast.utils               // 工具类<br>  cn.itcast.web.controller      // LoginServlet  处理  login.jsp 的数据   登录，注册，注销<pre><code>junit.test                    // 调试
+</code></pre>  WEB-INF/jsp                   // 保存所有jsp  <pre><code>cn.itcast.exception           // 异常处理包
+cn.itcast.web.formbean        // 返回表单数据封装包
+</code></pre></li>
+</ol>
+</li>
+<li><p>在类目录下创建一个代表数据库的XML文件(users.xml)</p>
+</li>
+<li>开发实体    -&gt;   domain  User.java</li>
+<li>开发dao(dao.impl)</li>
+<li>开发utils<ol>
+<li>抽取接口UserDao.java(dao)</li>
+</ol>
+</li>
+<li>XmlUtils.java (utils)</li>
+<li>开发测试类:(junit.test)</li>
+<li>开发service(对web层提供服务 -&gt;  service.impl)</li>
+<li>开发BusinessService<ol>
+<li>提取出接口（cn.itcast.service）</li>
+</ol>
+</li>
+<li>开发web层</li>
+<li>开发注册</li>
+<li>写一个RegisterUIServlet（cn.itcast.web.UI）为用户提供注册界面,它收到请求，跳到register.jsp(jsp)</li>
+<li>register.jsp</li>
+<li>register.jsp提交请求，交给RegisterServlet（cn.itcast.web.controller）处理</li>
+<li>RegisterServlet<ol>
+<li>设计用于校验表单数据RegisterFormbean</li>
+<li>写WebUtils工具类，封装请求数据到formbean中</li>
+<li>如果校验失败跳回到register.jsp，并回显错误信息</li>
+<li>如果校验通过，调用service向数据库中注册用户</li>
+</ol>
+</li>
+<li><p>开发登陆</p>
+<ol>
+<li>LoginUIServlet（web.UI）收到请求，跳到login.jsp(jsp)<ol start="2">
+<li>login.jsp提交给LoginServlet（web.controller）处理登陆请求</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>注销。。。。。。。。。。</p>
+</li>
+</ol>
+<p><font color="red">||||||||||||</font>测试的之后不应该查看src下面的users.xml，没有部署到服务器中，所有的java类放在classes目录中，改动之后的users.xml文件也会在此目录中。<br>需要处理的异常，放在一个异常包中，创建时其继承的父类必须是java.lang.exception。</p>
+<p>相对地址<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">name</span>=<span class="string">"form1"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">action</span>=<span class="string">"$&#123;pageContext.request.contextPath&#125;/servlet/RegisterServlet"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="day9-user-注册实例"><a href="#day9-user-注册实例" class="headerlink" title="day9_user  注册实例"></a>day9_user  注册实例</h4><ol>
+<li>users.xml</li>
+<li>User.java</li>
+<li>dao.impl</li>
+<li>XmlUtils.java</li>
+<li>junit.test   xml</li>
+<li>UserDao.java</li>
+<li>BusinessService</li>
+<li>BusinessServiceImpl</li>
+<li>UserExistException</li>
+<li>ServiceUtils</li>
+<li>junit.test   测试service</li>
+<li>index.jsp</li>
+<li>RegisterUIServlet</li>
+<li>register.jsp<pre><code>1. js
+</code></pre></li>
+<li>RegisterServlet</li>
+<li>RegisterFormbean</li>
+<li>WebUtils</li>
+<li>LoginUIServlet</li>
+<li>login.jsp<pre><code>1. css
+</code></pre></li>
+<li>LoginServlet</li>
+<li>LogoutServlet</li>
+</ol>
+<ol start="8">
+<li><p>开发service(对web层提供服务 -&gt;  service.impl)</p>
+<ol>
+<li>提取出接口（cn.itcast.service）</li>
+</ol>
+</li>
+<li>开发web层</li>
+<li>开发注册</li>
+<li>写一个RegisterUIServlet（cn.itcast.web.UI）为用户提供注册界面,它收到请求，跳到register.jsp(jsp)</li>
+<li>register.jsp</li>
+<li>register.jsp提交请求，交给RegisterServlet（cn.itcast.web.controller）处理</li>
+<li>RegisterServlet<ol>
+<li>设计用于校验表单数据RegisterFormbean</li>
+<li>写WebUtils工具类，封装请求数据到formbean中</li>
+<li>如果校验失败跳回到register.jsp，并回显错误信息</li>
+<li>如果校验通过，调用service向数据库中注册用户</li>
+</ol>
+</li>
+<li><p>开发登陆</p>
+<ol>
+<li>LoginUIServlet（web.UI）收到请求，跳到login.jsp(jsp)<ol start="2">
+<li>login.jsp提交给LoginServlet（web.controller）处理登陆请求</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>注销。。。。。。。。。。</p>
+</li>
+</ol>
+<h4 id="day-gwcar-购物车"><a href="#day-gwcar-购物车" class="headerlink" title="day_gwcar  购物车"></a>day_gwcar  购物车</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/20/MVC-day0910/" data-id="cjjtacegx0002cnonoa372icd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/20/Linux查看系统启动和运行时间/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux查看系统启动和运行时间
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/20/mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mysql</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/all/">all</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/all/" style="font-size: 10px;">all</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/day12-EL/">day12-EL</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/EMUI8-0官方解锁教程/">EMUI8.0官方解锁教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/javaweb-old/">javaweb-old</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/Linux查看系统启动和运行时间/">Linux查看系统启动和运行时间</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

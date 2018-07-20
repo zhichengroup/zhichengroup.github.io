@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>day12-EL | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC] EL表达式1. EL作用 获取数据 执行基本的关系与逻辑运算 获取web应用中的常用对象 调用Java方法  2. 例子12345&amp;lt;%    String data = &quot;asdf&quot;;    request.setAttribute(&quot;data&quot;,data);%&amp;gt;$&amp;#123;data&amp;#125;  &amp;lt;%-- pageContext.findAttribute(&quot;da">
+<meta property="og:type" content="article">
+<meta property="og:title" content="day12-EL">
+<meta property="og:url" content="http://yoursite.com/2018/07/20/day12-EL/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] EL表达式1. EL作用 获取数据 执行基本的关系与逻辑运算 获取web应用中的常用对象 调用Java方法  2. 例子12345&amp;lt;%    String data = &quot;asdf&quot;;    request.setAttribute(&quot;data&quot;,data);%&amp;gt;$&amp;#123;data&amp;#125;  &amp;lt;%-- pageContext.findAttribute(&quot;da">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-20T01:07:44.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="day12-EL">
+<meta name="twitter:description" content="[TOC] EL表达式1. EL作用 获取数据 执行基本的关系与逻辑运算 获取web应用中的常用对象 调用Java方法  2. 例子12345&amp;lt;%    String data = &quot;asdf&quot;;    request.setAttribute(&quot;data&quot;,data);%&amp;gt;$&amp;#123;data&amp;#125;  &amp;lt;%-- pageContext.findAttribute(&quot;da">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day12-EL" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/20/day12-EL/" class="article-date">
+  <time datetime="2018-07-20T00:01:51.000Z" itemprop="datePublished">2018-07-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      day12-EL
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h1><h2 id="1-EL作用"><a href="#1-EL作用" class="headerlink" title="1. EL作用"></a>1. EL作用</h2><ol>
+<li>获取数据</li>
+<li>执行基本的关系与逻辑运算</li>
+<li>获取web应用中的常用对象</li>
+<li>调用Java方法</li>
+</ol>
+<h2 id="2-例子"><a href="#2-例子" class="headerlink" title="2. 例子"></a>2. 例子</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">    String data = <span class="string">"asdf"</span>;</span><br><span class="line">    request.setAttribute(<span class="string">"data"</span>,data);</span><br><span class="line">%&gt;</span><br><span class="line">$&#123;data&#125;  &lt;%-- pageContext.findAttribute(<span class="string">"data"</span>) --%&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&#123;p.address.city&#125;</span><br><span class="line">$&#123;list[<span class="string">'1'</span>].name&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="域-范围："><a href="#域-范围：" class="headerlink" title="域 范围："></a>域 范围：</h5><ol>
+<li>page</li>
+<li>request</li>
+<li>session</li>
+<li>application</li>
+</ol>
+<h2 id="3-运算表达式"><a href="#3-运算表达式" class="headerlink" title="3. 运算表达式"></a>3. 运算表达式</h2><h5 id="1-EL关系运算符"><a href="#1-EL关系运算符" class="headerlink" title="1. EL关系运算符"></a>1. EL关系运算符</h5><table>
+<thead>
+<tr>
+<th>关系运算符</th>
+<th>说明</th>
+<th>范例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>== 或 eq</td>
+<td>等于</td>
+<td>${5==5}或${5eq5}</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>!= 或 ne</td>
+<td>不等于</td>
+<td>${5!=5}或${5ne5}</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>&lt; 或 lt</td>
+<td>小于</td>
+<td>${3&lt;5}或${3lt5}</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>&gt; 或 gt</td>
+<td>大于</td>
+<td>${3&gt;5}或{3gt5}</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>&lt;= 或 le</td>
+<td>小于等于</td>
+<td>${3&lt;=5}或${3le5}</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>&gt;= 或 ge</td>
+<td>大于等于</td>
+<td>${3&gt;=5}或${3ge5}</td>
+<td>FALSE</td>
+</tr>
+</tbody>
+</table>
+<h5 id="2-empty运算符：检查对象是否为null或空"><a href="#2-empty运算符：检查对象是否为null或空" class="headerlink" title="2. empty运算符：检查对象是否为null或空"></a>2. empty运算符：检查对象是否为null或空</h5><pre><code>${empty(list)} -&gt; true
+</code></pre><h5 id="3-二元表达式："><a href="#3-二元表达式：" class="headerlink" title="3. 二元表达式："></a>3. 二元表达式：</h5><pre><code>${user!=null?user.name:&quot;&quot;}
+</code></pre><h5 id="4-二元表达式数据回显："><a href="#4-二元表达式数据回显：" class="headerlink" title="4. 二元表达式数据回显："></a>4. 二元表达式数据回显：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">    User user = <span class="keyword">new</span> User();</span><br><span class="line">    user.setGender(<span class="string">"male"</span>);</span><br><span class="line">    request.setAttribute(<span class="string">"user"</span>,user);</span><br><span class="line">%&gt;</span><br><span class="line">&lt;input type=<span class="string">"radio"</span> name=<span class="string">"gender"</span> value=<span class="string">"male"</span> $&#123;user.gender==<span class="string">'male'</span>?<span class="string">'checked'</span>:<span class="string">''</span>&#125;&gt;男</span><br><span class="line">&lt;input type=<span class="string">"radio"</span> name=<span class="string">"gender"</span> value=<span class="string">"female"</span> $&#123;user.gender==<span class="string">'female'</span>?<span class="string">'checked'</span>:<span class="string">''</span>&#125;&gt;女</span><br></pre></td></tr></table></figure>
+<h5 id="4-EL表达式不支持字符串连接"><a href="#4-EL表达式不支持字符串连接" class="headerlink" title="4. EL表达式不支持字符串连接"></a>4. EL表达式不支持字符串连接</h5><h1 id="JSP九大隐式对象"><a href="#JSP九大隐式对象" class="headerlink" title="JSP九大隐式对象"></a>JSP九大隐式对象</h1><p>JSP的隐式对象是指在JSP页面系统中已经默认内置的Java对象，这些对象不需要开发人员显式声明即可使用。</p>
+<h2 id="1-application"><a href="#1-application" class="headerlink" title="1. application:"></a>1. application:</h2><ol>
+<li>application对象有效的范围是从web应用程序服务器一开始执行，到web服务器结束服务为止。</li>
+<li>对于一个网站中所有的JSP页面，application对象只有一个。它们操作的是同一个application对象。</li>
+<li>application是一个全局变量，所有访问同一服务器的客户都可访问application对象。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">  <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span>(application.getAttribute(<span class="string">"count"</span>) == <span class="keyword">null</span>)&#123;</span><br><span class="line">    count = <span class="number">1</span>;</span><br><span class="line">    application.setAttribute(<span class="string">"count"</span>, count);</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="comment">//存进去的是int值，返回的也将是int值，而不是String类型</span></span><br><span class="line">    count = (Integer)(application.getAttribute(<span class="string">"count"</span>));</span><br><span class="line">    count ++;</span><br><span class="line">    application.setAttribute(<span class="string">"count"</span>, count);</span><br><span class="line">    &#125;</span><br><span class="line">  out.print(<span class="string">"你是第"</span>+count+<span class="string">"位访客..."</span>);</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>获取服务器系统相关信息<br>application对象负责提供应用程序在服务器中运行时的一些全局信息，因此我们可以利用application来获取一些系统相关信息。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">  out.print(<span class="string">"服务器信息: "</span> + application.getServerInfo()+<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">  out.print(<span class="string">"Java Servlet API 主版本号: "</span> + application.getMajorVersion()+<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">  out.print(<span class="string">"Java Servlet API 次版本号: "</span>+application.getMinorVersion()+<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">  out.print(<span class="string">"本网页的真实路径："</span>+application.getRealPath(<span class="string">"index1.jsp"</span>)+<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>将得到输出结果:<br>服务器信息: Apache Tomcat/7.0.55<br>Java Servlet API 主版本号: 3<br>Java Servlet API 次版本号: 0<br>本网页的真实路径：</p>
+<blockquote>
+<p>E:\Code\Java-Newer.metadata.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jsp_ysdx\index1.jsp</p>
+</blockquote>
+<h2 id="2-config"><a href="#2-config" class="headerlink" title="2. config"></a>2. config</h2><ol>
+<li>config对象是在一个Servlet初始化时，JSP引擎向它传递信息用的，此信息包括Servlet初始化时所要用到的参数及服务器的有关信息。</li>
+<li>主要是对web.xml的数据进行读取。实际上是通过getServletContext()方法获得application对象，再根据application对象获得。可以直接在网页中获得web.xml中设置的数据。<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Config<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 此处要设置为将使用该数据的网页名 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">jsp-file</span>&gt;</span>/index1.jsp<span class="tag">&lt;/<span class="name">jsp-file</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>username<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>Chalmers<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>password<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>123456<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>Config<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/servlet/config<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">out.print(<span class="string">"username: "</span> + config.getInitParameter(<span class="string">"username"</span>)+ <span class="string">"&lt;br/&gt;"</span>);  </span><br><span class="line">out.print(<span class="string">"password:"</span> + config.getInitParameter(<span class="string">"password"</span>));</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>输出结果为:<br>username: Chalmers</p>
+</blockquote>
+<h2 id="3-exception"><a href="#3-exception" class="headerlink" title="3. exception"></a>3. exception</h2><p>作用如名所示，用来处理页面异常的。</p>
+<ol>
+<li>exception对象常用方法如下<ol>
+<li>getMessage()方法</li>
+<li>toString()方法</li>
+<li>printStackTrace()方法</li>
+<li>getLocalizedMessage()方法</li>
+<li>fillStackTrace()方法</li>
+</ol>
+</li>
+<li>用法:<br>注意:exception对象只能在定义了&lt;%@ page isErrorPage=”true”%&gt;中使用，否则没有该对象testException.jsp<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span> pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;%@ page errorPage=<span class="string">"handleException.jsp"</span>%&gt;  </span><br><span class="line">&lt;%</span><br><span class="line">  <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> b = <span class="number">10</span> / a;</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;%--handleException.jsp--%&gt;</span><br><span class="line"></span><br><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span> pageEncoding=<span class="string">"UTF-8"</span>%&gt;  </span><br><span class="line">&lt;%@ page isErrorPage=<span class="string">"true"</span>%&gt;</span><br><span class="line">&lt;%</span><br><span class="line">  out.print(exception.getMessage() + <span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">  exception.printStackTrace();</span><br><span class="line">%&gt;</span><br><span class="line">```     </span><br><span class="line"></span><br><span class="line">## 4. out</span><br><span class="line"><span class="number">1</span>. out对象主要用于向浏览器端输出数据</span><br><span class="line"><span class="number">2</span>. out实际上是带有缓冲特性的PrinterWriter，可以称之为JspWriter。缓冲区容量是可以设置的，甚至也可以关闭，只要通过page指令的buffer属性就可以达到此目的。</span><br><span class="line"><span class="number">3</span>. JSP文件代码中的文件内容会自动生成out.print()或者out.println()输出。</span><br><span class="line"></span><br><span class="line">## 5. page</span><br><span class="line"><span class="number">1</span>. page对象指代JSP页面本身、代表了正在运行的由JSP文件产生的类对象。</span><br><span class="line"><span class="number">2</span>. page对象的常用方法如下。</span><br><span class="line">   <span class="number">1</span>. getClass()方法</span><br><span class="line">   <span class="number">2</span>. equals()方法</span><br><span class="line">   <span class="number">3</span>. clone()方法</span><br><span class="line"></span><br><span class="line">实际上就是从Object中继承的方法</span><br><span class="line"></span><br><span class="line">## 6. request</span><br><span class="line"><span class="number">1</span>. 请求有效：请求页面A，并向A中传递某些参数。</span><br><span class="line"><span class="number">2</span>. 请求有效对象在处理结束时就会失效。</span><br><span class="line"><span class="number">3</span>. request对象可以获取哪些信息</span><br><span class="line">   <span class="number">1</span>. 建立HTML表单</span><br><span class="line">   ```XML</span><br><span class="line">   &lt;form action=“action” method=“method” name=“name”&gt;。。。&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>用REQUEST对象处理<br>JSP页面将数据存放在request对象里，并将该请求传递到下一个页面，下一个页面访问request对象，处理上一个JSP页面传递过来的数据。</li>
+<li><p>通过超链接来传递</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href="aaa.jsp?aa=aa&amp;bb=bb&amp;cc=cc"&gt;aaa&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过jsp动作标签param来进行传递</p>
+<ol start="4">
+<li>传递一组数据<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//发送一组数据到receive.jsp</span></span><br><span class="line">&lt;form action=<span class="string">"receive.jsp"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line">  跑步&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"habits"</span> value=<span class="string">"running"</span> /&gt;&lt;br /&gt;</span><br><span class="line">  阅读&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"habits"</span> value=<span class="string">"reading"</span> /&gt;&lt;br /&gt;</span><br><span class="line">  游戏&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"habits"</span> value=<span class="string">"game"</span> /&gt;&lt;br /&gt;</span><br><span class="line">  &lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span> /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>接收<br>参数要一致</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] habits = request.getParameterValues(<span class="string">"habits"</span>);</span><br><span class="line"><span class="keyword">for</span>(String s : habits)&#123;</span><br><span class="line">  out.print(s+<span class="string">"&lt;br/&gt;"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-response"><a href="#7-response" class="headerlink" title="7. response"></a>7. response</h2><ol>
+<li>response对象负责将服务器端的数据发送回浏览器的客户端。主要用于向客户端发送数据，如Cookie、HTTP文件头等信息。</li>
+<li><p>利用response实现自动刷新</p>
+<ol>
+<li>刷新当前界面<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(<span class="string">"refresh"</span>, <span class="string">"3"</span>);</span><br><span class="line">out.print(<span class="keyword">new</span> Date().toString());</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果:每隔3秒刷新一次界面，显示当前时间<br><br></p>
+<ol start="2">
+<li>跳转界面<br>&lt;%<br>out.print(“3秒后刷新…”);<br>response.setHeader(“refresh”, “3;url=count.jsp”);<br>%&gt;<br><br></li>
+</ol>
+</li>
+<li><p>添加Cookie</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">  Cookie cookie = <span class="keyword">new</span> Cookie(<span class="string">"username"</span>, <span class="string">"Chalmers"</span>);</span><br><span class="line">  <span class="comment">//设置保存时间为60*60秒</span></span><br><span class="line">  cookie.setMaxAge(<span class="number">60</span> * <span class="number">60</span>);</span><br><span class="line">  response.addCookie(cookie);</span><br><span class="line">%&gt;</span><br><span class="line">```  </span><br><span class="line">```JAVA</span><br><span class="line">&lt;%</span><br><span class="line">  Cookie[] cookies = request.getCookies();</span><br><span class="line">  <span class="keyword">for</span> (Cookie c : cookies) &#123;</span><br><span class="line">    <span class="keyword">if</span> (c.getName().equals(<span class="string">"username"</span>)) &#123;</span><br><span class="line">      out.print(c.getValue());</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  out.print(<span class="string">"没有..."</span>);</span><br><span class="line">%&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 8. pageContext</span><br><span class="line"><span class="number">1</span>. pageContext对象能够存取其他隐含对象。</span><br><span class="line"><span class="number">2</span>. 当隐含对象本身也支持属性时，pageContext对象也提供存取那些属性的方法。</span><br><span class="line"></span><br><span class="line">## 9. session</span><br><span class="line"><span class="number">1</span>. session对象用于存储一个用户的会话状态，也就是说，session对象是对某个用户的会话过程中的信息存储。</span><br><span class="line"><span class="number">2</span>. 当客户端访问服务器时，会在服务器中搜索对应的sessionID，如果没有找到，那么便会创建一个，如果找到了便直接使用。</span><br><span class="line">所以在session 的有效时间内，每个客户端只有一个sessionID。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 10 . pageContext，request、session、application传递参数的使用范围:</span><br><span class="line"><span class="number">1</span>. 设置参数值</span><br><span class="line">```JAVA</span><br><span class="line">&lt;%</span><br><span class="line">  pageContext.setAttribute(<span class="string">"pageContext"</span>, <span class="string">"true"</span>);</span><br><span class="line">  request.setAttribute(<span class="string">"request"</span>, <span class="string">"true"</span>);</span><br><span class="line">  session.setAttribute(<span class="string">"session"</span>, <span class="string">"true"</span>);</span><br><span class="line">  application.setAttribute(<span class="string">"application"</span>, <span class="string">"true"</span>);</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当前页面中，所有的对象都可以通过getAttribute获得值</p>
+</li>
+<li>在request的forward方法传递中，pageContext接收数据失败，所以pageContext只能在定义页面中使用。</li>
+<li>request的include方法同上</li>
+<li>如果使用response的sendRedirect方法，那么request也将接收失败。原因：客户端向服务端请求数据，服务端在向客户端发送数据<br>完成后，该request便已经结束，客户端访问url时已经是一个新的request了，所以request的使用范围是一个request内。</li>
+<li>在session的有效时间内，数据都是存在的，特别强调的是，关闭浏览器不会清除掉session。</li>
+<li>而application只有在关闭服务端后才会被清除，可见上面的application介绍。</li>
+<li>总结:范围大小:<blockquote>
+<p>application &gt; session &gt; request &gt; pageContext</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="11-Cookie与Session的区别"><a href="#11-Cookie与Session的区别" class="headerlink" title="11. Cookie与Session的区别"></a>11. Cookie与Session的区别</h2><p>Cookie是存在浏览器中的<br>Session是存在服务器中的<br>Cookie的安全性要低于Session<br>Cookie可能会被用户禁用<br>Session的数据是存在服务器内存中，关掉浏览器，会清空Session<br>临时性Cookie存在浏览器的缓存中，关掉浏览器，会清空<br>永久性Cookie是存在临时文件中，到达有效期前，一直存在</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/20/day12-EL/" data-id="cjjtacegz0003cnonjcvywlfm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/20/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/20/EMUI8-0官方解锁教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">EMUI8.0官方解锁教程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/all/">all</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/all/" style="font-size: 10px;">all</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/07/20/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/day12-EL/">day12-EL</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/EMUI8-0官方解锁教程/">EMUI8.0官方解锁教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/javaweb-old/">javaweb-old</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/20/Linux查看系统启动和运行时间/">Linux查看系统启动和运行时间</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
