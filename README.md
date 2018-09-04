@@ -1,3 +1,4 @@
 # zhichengroup.github.io
-# zcg
+# zcg-blog
 [zcg](https://zhichengroup.github.io)
+[zcg-page](https://zhichengroup.github.io/zcg)
